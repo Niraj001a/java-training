@@ -1,0 +1,7 @@
+package com.test.org;
+
+class InvalidApplicantNameException extends RuntimeException {
+    public InvalidApplicantNameException(String message) {
+        super(message);
+    }
+}

@@ -1,0 +1,23 @@
+package advancejavahandson;
+
+
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        IJobOpeningDao jobOpeningDao = new JobOpeningDao();
+        IJobOpeningService jobOpeningService = new JobOpeningService(jobOpeningDao);
+
+        // Creating job openings
+        JobOpening job1 = jobOpeningService.createJobOpening("Maveric", "Java", Skill.JAVA);
+        JobOpening job2 = jobOpeningService.createJobOpening("XYZ123", "QA Tester", Skill.TESTING);
+
+        // Applying for jobs
+        jobOpeningService.applyForJob(1, "Niraj", "Kumar");
+        jobOpeningService.applyForJob(job2.getId(), "Nishant", "Kumar");
+
+        
+        List<JobApplication> applications = jobOpeningService.findAllApplicationsByJobIdOrderedByFirstName(job1.getId());
+        System.out.println("Applications for Job 1 ordered by first name: " + applications);
+    }
+}

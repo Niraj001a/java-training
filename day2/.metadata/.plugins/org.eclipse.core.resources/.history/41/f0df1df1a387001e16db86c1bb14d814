@@ -1,0 +1,10 @@
+package advJavaRetest;
+public class JobOpening {
+    private long id;
+    private String description;
+    private String postedByCompany;
+    private Skill skillRequired;
+    private Set<JobApplication> receivedApplications = new HashSet<>();
+
+    // Constructors, getters, setters
+}

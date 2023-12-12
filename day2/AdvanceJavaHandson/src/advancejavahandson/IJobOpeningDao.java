@@ -1,0 +1,15 @@
+package advancejavahandson;
+
+
+import java.util.Optional;
+import java.util.Set;
+
+interface IJobOpeningDao {
+    JobOpening save(JobOpening job);
+
+    Optional<JobOpening> findById(long id);
+
+    Set<JobOpening> findAllJobs();
+
+    JobOpening update(JobOpening jobOpening);
+}

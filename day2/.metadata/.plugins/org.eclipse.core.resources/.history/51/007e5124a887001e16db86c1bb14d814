@@ -1,0 +1,123 @@
+package job;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class RecruitmentPlatform {
+    private List<JobOpening> jobOpenings = new ArrayList<>();
+    private List<JobApplication> jobApplications = new ArrayList<>();
+
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+        // Example usage
+        RecruitmentPlatform platform = new RecruitmentPlatform();
+       int  ch=sc.nextInt();
+       
+       switch(ch) {
+       case 1:{
+    	   
+    	   System.out.println("Enter the Company name:");
+    	   String cName=sc.nextLine();
+    	   System.out.println("Enter the Company description:");
+    	   String cDes=sc.nextLine();
+    	   System.out.println("Enter the Company Skill:");
+    	   String cSkill=sc.nextLine();
+    	   
+    	   platform.createJobOpening(cName,cDes,cSkill);
+    	   
+    	   System.out.println("Job created Successfully");
+    	   
+       }
+       break;
+    	   
+       }
+
+       
+
+      
+    }
+
+    public void createJobOpening(String companyName, String description, String skill)
+             {
+        validateCompanyName(companyName);
+        validateDescription(description);
+
+        JobOpening jobOpening = new JobOpening(companyName, description, skill);
+        jobOpenings.add(jobOpening);
+    }
+
+    public JobOpening findJobById(int jobId) {
+        
+
+        for (JobOpening job : jobOpenings) {
+            if (job.getId() == jobId) {
+                return job;
+            }
+        }
+		return null;
+
+        
+    }
+
+    public void applyForJob(int jobId, String firstName, String lastName)
+            {
+        
+        validateApplicantName(firstName);
+        validateApplicantName(lastName);
+
+        JobApplication application = new JobApplication(jobId, firstName, lastName);
+        jobApplications.add(application);
+    }
+
+    public List<JobOpening> findAllOpeningsByCompany(String companyName, String skill) {
+        validateCompanyName(companyName);
+
+        List<JobOpening> companyOpenings = new ArrayList<>();
+        for (JobOpening job : jobOpenings) {
+            if (job.getCompanyName().equals(companyName) && job.getSkill().equals(skill)) {
+                companyOpenings.add(job);
+            }
+        }
+
+        companyOpenings.sort(Comparator.comparing(JobOpening::getSkill));
+        return companyOpenings;
+    }
+
+    public List<JobApplication> findAllApplicationsByJobId(int jobId)
+             {
+      
+
+        List<JobApplication> jobApplicationsList = new ArrayList<>();
+        for (JobApplication application : jobApplications) {
+            if (application.getJobId() == jobId) {
+                jobApplicationsList.add(application);
+            }
+        }
+
+        jobApplicationsList.sort(Comparator.comparing(JobApplication::getFirstName));
+        return jobApplicationsList;
+    }
+
+    private void validateCompanyName(String companyName) {
+        if (companyName.length() < 2 || companyName.length() > 15 || !companyName.matches("[a-zA-Z0-9]+")) {
+            
+        }
+    }
+
+    private void validateDescription(String description)  {
+        if (description.length() < 2 || description.length() > 100) {
+           
+        }
+    }
+
+    
+
+    private void validateApplicantName(String name)  {
+        if (name.length() < 2 || name.length() > 10 || !name.matches("[a-zA-Z0-9]+")) {
+
+        }
+    }
+}

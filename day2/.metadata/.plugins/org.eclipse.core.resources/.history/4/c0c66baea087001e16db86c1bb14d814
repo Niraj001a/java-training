@@ -1,0 +1,25 @@
+package com.maveric.productms;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class NewProductServiceImpl implements INewProductService {
+
+
+	@Override
+    public ProductDetails getProductById(Long id) {
+       
+    	return ProductDetailsDB.getStore().get(id); 
+    }
+
+    @Override
+    public List<ProductDetails> fetchAllProducts() {
+        // Implement the logic to fetch all products
+        // For demonstration purposes, let's return a list of dummy ProductDetails
+        List<ProductDetails> productList = new ArrayList<>();
+        productList.add(new ProductDetails("Redmi", 20000.0));
+        productList.add(new ProductDetails("Moto", 50000.0));
+        return productList;
+    }
+
+}

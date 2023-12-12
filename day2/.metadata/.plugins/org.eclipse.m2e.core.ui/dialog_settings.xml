@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\nirajku\Downloads\Unit testing File\Unit_testing\src\main\java\com\main\Main.java"/>
+			<item value="C:\Users\nirajku\eclipse-workspace\javaBasics\DesignPatternHandson"/>
+			<item value="C:\Users\nirajku\eclipse-workspace\javaBasics\day2"/>
+			<item value="C:\Users\nirajku\eclipse-workspace\javaBasics\day2\DesignPattern\src\designpattern\LoggerUsage.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="DesignPattern"/>
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="https://repo1.maven.org/maven2/archetype-catalog.xml"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="niraj"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="niraj"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\nirajku\Downloads\Unit testing File"/>
+			<item value="C:\Users\nirajku\Downloads\Test_PracticeProject 1"/>
+			<item value="C:\Users\nirajku\Downloads\jpatest11"/>
+			<item value="C:\Users\nirajku\Downloads\jpatest11\PracticeProject"/>
+			<item value="C:\Users\nirajku\Downloads\JPA_Test 3\JPA_Test"/>
+			<item value="C:\Users\nirajku\Downloads\JPA_Test 3"/>
+			<item value="C:\Users\nirajku\Downloads\design_pattern\design_pattern\productms"/>
+			<item value="C:\Users\nirajku\Downloads\design_pattern\design_pattern\loggerproblem"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
